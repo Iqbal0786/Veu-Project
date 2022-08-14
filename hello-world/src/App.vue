@@ -1,6 +1,13 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-   <div>Hii {{name}}</div>
+  <!-- binding text with mustach syntax -->
+   <div>Hii I am  {{name}}</div>  
+
+   <!-- binding text with directive  -->
+   <div v-text="passion"></div>
+
+   <div> My age is {{age}}</div>
+    
 </template>
 
 <script>
@@ -9,7 +16,11 @@
 export default {
   name: 'App',
     data(){
-      return {name:"Iqbal"}
+      return {name:"Iqbal",
+        passion:" I am a Full Stack Web Developer ",
+        age:21
+          
+      }
     }
 }
 </script>
