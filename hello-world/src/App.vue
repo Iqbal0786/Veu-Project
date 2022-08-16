@@ -2,13 +2,12 @@
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
     <!-- binding text with mustach syntax -->
-    <div>Hii I am {{ name }}</div>
+    <h1>Hii I am {{ name }}</h1>
 
     <!-- binding text with directive  -->
-    <div v-text="passion"></div>
+    <h4 v-text="passion"></h4>
 
     <h4 >My age is {{ age }}</h4>
-    <button @click="alertAge">alet age</button>
 
     <div id="formData">
       <h1>Register from here</h1>
@@ -40,8 +39,8 @@
       </form>
     </div>
 
-     <div>
-       out put : {{JSON.stringify(formData)}}
+     <div id="resultDiv">
+      Live Output : {{JSON.stringify(formData)}}
      </div>
     <!-- root end -->
   </div>
@@ -65,7 +64,7 @@ export default {
   },
       methods:{
         postData(){
-     
+      alert(JSON.stringify(this.formData))
           console.log(JSON.stringify(this.formData))
         },
         alertAge(){
@@ -93,9 +92,17 @@ input{
   margin-left: 20px;
 }
 #formData{
+  width: 70%;
+  height: 300px;
+  margin: auto;
    text-align: center;
    align-items: center;
    margin-bottom: 20px;
+   margin-top: 30px;
+   padding: 10px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   background-color: #08345b;
+   color: white;
 }
 button{
   padding: 15px 60px;
@@ -104,5 +111,18 @@ button{
   margin-top: 15px;
   border: none;
   border-radius: 20px;
+}
+#resultDiv{
+  width: 70%;
+  height: 50px;
+  margin: auto;
+  margin-top: 40px;
+  padding:20px;
+  border: 1px solid red;
+   background-color: #e42134;
+   color: white;
+   margin-bottom: 40px;
+   font-family: 'Courier New', Courier, monospace;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 </style>
