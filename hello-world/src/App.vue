@@ -7,7 +7,8 @@
     <!-- binding text with directive  -->
     <div v-text="passion"></div>
 
-    <div>My age is {{ age }}</div>
+    <h4 >My age is {{ age }}</h4>
+    <button @click="alertAge">alet age</button>
 
     <div id="formData">
       <h1>Register from here</h1>
@@ -59,17 +60,18 @@ export default {
         email: "",
         password: "",
         skills: [],
-      },
-      methods:{
-        postData(){
-          alert("Hii")
-          //event.preventDefault();
-     
-          console.log(this.formData)
-        }
       }
     };
   },
+      methods:{
+        postData(){
+     
+          console.log(JSON.stringify(this.formData))
+        },
+        alertAge(){
+          console.log(this.age)
+        }
+      }
 };
 </script>
 
